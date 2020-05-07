@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Redirect;
 use App\Imports\KeywordCountOptionImport;
+use App\KeyWordCountOption;
 use DB;
 use Auth;
 use Session;
@@ -44,7 +45,9 @@ class KeyWordParsingController extends Controller
             $extension = File::extension($request->excelFile->getClientOriginalName());
             if ($extension == "xlsx" || $extension == "xls") {
                 $data = Excel::Import(new KeywordCountOptionImport, request()->file('excelFile'));
-                    dd($data);
+                $keywordMap = KeyWordCountOption::all();
+                KeyWordCountOption::truncate();
+                dd($keywordMap[0]->exactMatch);
                 if(!empty($data) && $data->count()){
                     foreach ($data as $key => $value) {
                         $insert[] = [
