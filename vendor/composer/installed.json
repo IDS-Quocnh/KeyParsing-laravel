@@ -5209,6 +5209,55 @@
         "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles"
     },
     {
+        "name": "unisharp/laravel-fileapi",
+        "version": "v1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/UniSharp/laravel-fileapi.git",
+            "reference": "7f38fb73fe2b7295fb2cf508198f05b3b9dd646b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/UniSharp/laravel-fileapi/zipball/7f38fb73fe2b7295fb2cf508198f05b3b9dd646b",
+            "reference": "7f38fb73fe2b7295fb2cf508198f05b3b9dd646b",
+            "shasum": ""
+        },
+        "require": {
+            "ext-gd": "*",
+            "illuminate/support": ">=5.0.0",
+            "league/flysystem": ">=1.0",
+            "php": ">=5.5.0",
+            "symfony/http-foundation": ">=2.0"
+        },
+        "time": "2017-11-14T02:42:59+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Unisharp\\FileApi\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "UniSharp Ltd. (Composer Package Maintainer)",
+                "homepage": "http://www.unisharp.com"
+            }
+        ],
+        "description": "Laravel File API - Handle Files with Laravel Storage",
+        "keywords": [
+            "api",
+            "file",
+            "fileapi",
+            "laravel",
+            "storage"
+        ]
+    },
+    {
         "name": "vlucas/phpdotenv",
         "version": "v2.6.3",
         "version_normalized": "2.6.3.0",

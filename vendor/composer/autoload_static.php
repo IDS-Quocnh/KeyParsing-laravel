@@ -96,6 +96,10 @@ class ComposerStaticInitafdd246d5c62400f7c8d8019bdc2ca86
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
         ),
+        'U' => 
+        array (
+            'Unisharp\\FileApi\\' => 17,
+        ),
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
@@ -212,6 +216,10 @@ class ComposerStaticInitafdd246d5c62400f7c8d8019bdc2ca86
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Unisharp\\FileApi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/unisharp/laravel-fileapi/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -480,6 +488,7 @@ class ComposerStaticInitafdd246d5c62400f7c8d8019bdc2ca86
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\KeywordParsingController' => __DIR__ . '/../..' . '/app/Http/Controllers/KeywordParsingController.php',
         'App\\Http\\Controllers\\QuickRankingController' => __DIR__ . '/../..' . '/app/Http/Controllers/QuickRankingController copy.php',
+        'App\\Http\\Controllers\\SettingController' => __DIR__ . '/../..' . '/app/Http/Controllers/SettingController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -4368,6 +4377,9 @@ class ComposerStaticInitafdd246d5c62400f7c8d8019bdc2ca86
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+        'Unisharp\\FileApi\\FileApi' => __DIR__ . '/..' . '/unisharp/laravel-fileapi/src/FileApi.php',
+        'Unisharp\\FileApi\\FileApiServiceProvider' => __DIR__ . '/..' . '/unisharp/laravel-fileapi/src/FileApiServiceProvider.php',
+        'Unisharp\\FileApi\\Http\\Controllers\\Api\\FileController' => __DIR__ . '/..' . '/unisharp/laravel-fileapi/src/Http/Controllers/Api/FileController.php',
         'UpdateHelper\\ComposerPlugin' => __DIR__ . '/..' . '/kylekatarnls/update-helper/src/UpdateHelper/ComposerPlugin.php',
         'UpdateHelper\\NotUpdateInterfaceInstanceException' => __DIR__ . '/..' . '/kylekatarnls/update-helper/src/UpdateHelper/NotUpdateInterfaceInstanceException.php',
         'UpdateHelper\\UpdateHelper' => __DIR__ . '/..' . '/kylekatarnls/update-helper/src/UpdateHelper/UpdateHelper.php',
