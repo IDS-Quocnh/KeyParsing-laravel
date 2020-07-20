@@ -23,7 +23,7 @@
                         format </label>
                     <div class="col-lg-12">
                         <input id="file" type="file" name="englishFile" value=""
-                               class="form-control h-auto" accept=".json" required/>
+                               class="form-control h-auto" accept=".json" />
 
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <label class="col-form-label col-lg-12">Please select Json file (<code>.json</code>) format </label>
                     <div class="col-lg-12">
                         <input id="file" type="file" name="italianFile" value="" accept=".json"
-                               class="form-control h-auto" required>
+                               class="form-control h-auto" >
 
                     </div>
                 </div>
@@ -49,31 +49,6 @@
 
     </div>
 </div>
-@if (isset($keywordList))
-<div class="card">
-    <div class="card-body">
-        <table class="table datatable-button-html5-basic" data-page-length='50'>
-            <thead>
-                <tr>
-                    <th class="text-center bold">Keyword</th>
-                </tr>
-            </thead>
-            <tbody>
-            @php ($i = 0)
-            @foreach ($keywordList as $keywordItem)
-            @php ($i = $i+1)
-                 @if ($keywordItem['exits'])
-                <tr>
-                    <td>{{$keywordItem['keyword']}}</td>
-                </tr>
-                @endif
-            @endforeach
-            </tbody>
-        </table>
-    </div>
-</div>
-@endif
-<!-- /form inputs -->
 
 
 @endsection

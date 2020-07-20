@@ -62,20 +62,10 @@
                             </a>
                                 <div class="dropdown-menu  profile-dropdown " style="min-width: auto">
                                     @if(auth()->user()->default_language != "English")
-                                        <a href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item notify-item">
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                            <span>English</span>
-                                        </a>
+                                        <a href="{!! route('user.change-language', ['en']) !!}" class="dropdown-item notify-item" ><span>English</span></a>
                                     @endif
                                     @if(auth()->user()->default_language != "Italian")
-                                        <a href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item notify-item">
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                            <span>Italian</span>
-                                        </a>
+                                            <a href="{!! route('user.change-language', ['it']) !!}" class="dropdown-item notify-item" ><span>Italian</span></a>
                                     @endif
                                 </div>
                         </li>
@@ -202,7 +192,7 @@
 
                         <ul id="side-menu">
 
-                            <li class="menu-title">Navigation</li>
+                            <li class="menu-title">{{ __('Navigation') }}</li>
 
                             <li>
                                 <a href="{{ route('home') }}">

@@ -40,8 +40,32 @@ class SettingController extends Controller
 
     public function uploadLanguages(Request $request)
     {
-        if($request->hasFile('englishFile')) {
+        if ($request->hasFile('englishFile')) {
+            $englishFile = $request->file('englishFile');
+            $fileName = $englishFile->getClientOriginalName();
+            $request->englishFile->move(resource_path('/lang/en'), $fileName);
         }
+
+        if ($request->hasFile('italianFile')) {
+            $italianFile = $request->file('italianFile');
+            $fileName = $italianFile->getClientOriginalName();
+            $request->italianFile->move(resource_path('/lang/it'), $fileName);
+        }
+        return redirect()->back();
+    }
+
+    public function changeLanguage(Request $request){
+        $lang = $request->language;
+        $language = config('app.locale');
+        if ($lang == 'en') {
+            $language = 'en';
+        }
+        if ($lang == 'it') {
+            $language = 'it';
+        }
+
+        Session::put('language', $language);
+        return redirect()->back();
     }
 
 
