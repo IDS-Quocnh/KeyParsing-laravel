@@ -6,7 +6,7 @@
         <!-- Ajax sourced data -->
         <div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Fine Information</h5>
+						<h5 class="card-title">{{ __("Fine Information") }}</h5>
 						
 					
           
@@ -16,7 +16,7 @@
 						<thead>
 							<tr>
 				                <th>File Name</th>
-				                <th class="text-center">File Point</th>
+				                <th class="text-center">{{ __("File Point") }}</th>
 				            </tr>
 						</thead>
 						<tbody>
@@ -42,7 +42,7 @@
         <!-- Ajax sourced data -->
         <div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Point Distribution</h5>
+						<h5 class="card-title">{{ __("Point Distribution") }}</h5>
 						
 					
           
@@ -51,11 +51,11 @@
           <table class="display nowrap table datatable-button-html5-basic" data-page-length='50'>
 						<thead>
 							<tr>
-				                <th>Keyword</th>
-				                <th class="text-center">Weight</th>
-				                <th >Mathc Type</th>
-				                <th class="text-center">Number of Match</th>
-				                <th class="text-center">Point</th>
+				                <th>{{ __("Keyword") }}</th>
+				                <th class="text-center">{{ __("Weight") }}</th>
+				                <th >{{ __("Mathc Type") }}</th>
+				                <th class="text-center">{{ __("Number of Match") }}</th>
+				                <th class="text-center">{{ __("Point") }}</th>
 				            </tr>
 						</thead>
 						<tbody>
@@ -104,9 +104,9 @@ var _componentDatatableButtonsHtml5 = function() {
 		autoWidth: false,
 		dom: '<"datatable-header"fBl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
 		language: {
-			search: '<span>Filter:</span> _INPUT_',
-			searchPlaceholder: 'Type to filter...',
-			lengthMenu: '<span>Show:</span> _MENU_',
+			search: '<span>{{ __("Filter") }}:</span> _INPUT_',
+			searchPlaceholder: '{{ __("Type to filter...") }}',
+			lengthMenu: '<span>{{ __("Show") }}:</span> _MENU_',
 			paginate: { 'first': 'First', 'last': 'Last', 'next': $('html').attr('dir') == 'rtl' ? '&larr;' : '&rarr;', 'previous': $('html').attr('dir') == 'rtl' ? '&rarr;' : '&larr;' }
 		}
 	});

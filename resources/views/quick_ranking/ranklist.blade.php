@@ -7,8 +7,7 @@
 					@if(sizeof($errorFiles) >0)
 					<div class="row" style="padding:15px">
 						<div class="alert alert-danger col-12" role="alert">
-							<span class="mt-2">Getting error with some files, those files could be scanned or saved as image format,
-								please check again
+							<span class="mt-2">{{ __("Getting error with some files, those files could be scanned or saved as image format, please check again") }}
 							</span>
 							@foreach ($errorFiles as $cvname)
 								<br><span>[{{$cvname}}]</span>
@@ -23,10 +22,10 @@
 					<table class="table datatable-button-html5-basic" data-page-length='50'>
 						<thead>
 							<tr>
-				                <th class="text-center">Rank</th>
-				                <th>File Name</th>
-				                <th class="text-center">File Point</th>
-				                <th class="text-center">Action</th>
+				                <th class="text-center">{{ __("Rank") }}</th>
+				                <th>{{ __("File Name") }}</th>
+				                <th class="text-center">{{ __("File Point") }}</th>
+				                <th class="text-center">{{ __("Action") }}</th>
 				            </tr>
 						</thead>
 						<tbody>
@@ -43,7 +42,7 @@
 								<td class="text-center">
 								<a target="_blank"
 								 href="{{url('quick-ranking-detail')}}?fid={{$cv->id}}&operationId={{$operationId}}" >
-								  <i class="icon-list "></i> Point Details</a>
+								  <i class="icon-list "></i> {{ __("Point Details") }}</a>
 								  </td>
 				            </tr>
 

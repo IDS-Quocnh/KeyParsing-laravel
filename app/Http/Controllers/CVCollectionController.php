@@ -125,18 +125,18 @@ class CVCollectionController extends Controller
 
 
 $regex = <<<'END'
-/
-  (
-    (?: [\x00-\x7F]               # single-byte sequences   0xxxxxxx
-    |   [\xC0-\xDF][\x80-\xBF]    # double-byte sequences   110xxxxx 10xxxxxx
-    |   [\xE0-\xEF][\x80-\xBF]{2} # triple-byte sequences   1110xxxx 10xxxxxx * 2
-    |   [\xF0-\xF7][\x80-\xBF]{3} # quadruple-byte sequence 11110xxx 10xxxxxx * 3 
-    ){1,100}                      # ...one or more times
-  )
-| ( [\x80-\xBF] )                 # invalid byte in range 10000000 - 10111111
-| ( [\xC0-\xFF] )                 # invalid byte in range 11000000 - 11111111
-/x
-END;
+            /
+              (
+                (?: [\x00-\x7F]               # single-byte sequences   0xxxxxxx
+                |   [\xC0-\xDF][\x80-\xBF]    # double-byte sequences   110xxxxx 10xxxxxx
+                |   [\xE0-\xEF][\x80-\xBF]{2} # triple-byte sequences   1110xxxx 10xxxxxx * 2
+                |   [\xF0-\xF7][\x80-\xBF]{3} # quadruple-byte sequence 11110xxx 10xxxxxx * 3 
+                ){1,100}                      # ...one or more times
+              )
+            | ( [\x80-\xBF] )                 # invalid byte in range 10000000 - 10111111
+            | ( [\xC0-\xFF] )                 # invalid byte in range 11000000 - 11111111
+            /x
+            END;
         
         $content= preg_replace($regex, '$1',  $content);
         $words = preg_replace("/[^\w\ _]+/", ' ', $content); // strip all punctuation characters, news lines, etc.
@@ -190,34 +190,31 @@ END;
         $converter = new DocxToTextConversion($filePath);
         return  $converter->convertToText();
       }
-      catch (\Exception $e)
-      {
-        $this->error_message[] = $fileName .' :: ' . $e->getMessage();
-        return "";
-      }
+      catch (\Exception $e) {
+            $this->error_message[] = $fileName . ' :: ' . $e->getMessage();
+            return "";
+        }
     }
 
     public function downloadZip()
     {
         $zip_file = 'document.zip';
-$zip = new \ZipArchive();
-$zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
+        $zip = new \ZipArchive();
+        $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
 
-$path = public_path('/uploads');
-$files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
-foreach ($files as $name => $file)
-{
-	if (!$file->isDir()) {
+        $path = public_path('/uploads');
+        $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
+        foreach ($files as $name => $file) {
+            if (! $file->isDir()) {
 
-        $filePath     = $file->getRealPath();
+                $filePath = $file->getRealPath();
+                // extracting filename with substr/strlen
+                $relativePath = 'invoices/' . substr($filePath, strlen($path));
+                $zip->addFile($filePath, $relativePath);
+            }
 
-        // extracting filename with substr/strlen
-        $relativePath = 'invoices/' . substr($filePath, strlen($path) + 1);
-
-        $zip->addFile($filePath, $relativePath);
-}
-
-}
-$zip->close();
-return response()->download($zip_file);    }   
+        }
+        $zip->close();
+        return response()->download($zip_file);    
+    }   
 }

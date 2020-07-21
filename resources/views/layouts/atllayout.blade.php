@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>{{$title}} | UBold - Responsive Admin Dashboard Template</title>
+        <title>{{$title}} | {{ __('CV-Ranking') }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -82,7 +82,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                                                 {{ csrf_field() }}
                                                                             </form>
-                                    <span>Log out</span>
+                                    <span>{{ __('Log out') }} </span>
                                 </a>
                             </div>
                         </li>
@@ -150,42 +150,6 @@
                 <div class="h-100" data-simplebar>
 
                     <!-- User box -->
-                    <div class="user-box text-center">
-                        <img src="{{ asset('assets/UBold/images/users/user-1.jpg') }}" alt="user-img" title="Mat Helme"
-                            class="rounded-circle avatar-md">
-                        <div class="dropdown">
-                            <a href="javascript: void(0);" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block"
-                                data-toggle="dropdown">Geneva Kennedy</a>
-                            <div class="dropdown-menu user-pro-dropdown">
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-user mr-1"></i>
-                                    <span>My Account</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-settings mr-1"></i>
-                                    <span>Settings</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-lock mr-1"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-log-out mr-1"></i>
-                                    <span>Logout</span>
-                                </a>
-
-                            </div>
-                        </div>
-                        <p class="text-muted">Admin Head</p>
-                    </div>
 
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
@@ -198,7 +162,7 @@
                                 <a href="{{ route('home') }}">
                                     <i data-feather="airplay"></i>
                                     <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> Dashboards </span>
+                                    <span> {{ __('Dashboards') }} </span>
                                 </a>
                             </li>
 
@@ -206,7 +170,7 @@
                                 <a href="{{ route('cv-list') }}">
                                     <i data-feather="grid"></i>
                                     <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> CV Collection </span>
+                                    <span> {{ __('CV Collection') }} </span>
                                 </a>
                             </li>
 
@@ -214,7 +178,7 @@
                                 <a href="{{ route('ranking') }}">
                                     <i data-feather="cpu"></i>
                                     <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> CV Ranking </span>
+                                    <span> {{ __('CV Ranking') }} </span>
                                 </a>
                             </li>
 
@@ -222,7 +186,7 @@
                                 <a href="{{ route('quick-ranking') }}">
                                     <i data-feather="cpu"></i>
                                     <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> Quick Ranking </span>
+                                    <span> {{ __('Quick Ranking') }} </span>
                                 </a>
                             </li>
 
@@ -230,7 +194,7 @@
                                 <a href="{{ route('keyword-parsing') }}">
                                     <i data-feather="cpu"></i>
                                     <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> Key Parsing </span>
+                                    <span> {{ __('Key Parsing') }}  </span>
                                 </a>
                             </li>
 
@@ -264,7 +228,7 @@
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Apps</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">{{ __('Apps') }}</a></li>
                                             <li class="breadcrumb-item active">{{$title}}</li>
                                         </ol>
                                     </div>
@@ -288,9 +252,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-right footer-links d-none d-sm-block">
-                                    <a href="javascript:void(0);">About Us</a>
-                                    <a href="javascript:void(0);">Help</a>
-                                    <a href="javascript:void(0);">Contact Us</a>
+                                    <a href="javascript:void(0);">{{ __('About Us') }} </a>
+                                    <a href="javascript:void(0);">{{ __('Help') }} </a>
+                                    <a href="javascript:void(0);">{{ __('Contact Us') }} </a>
                                 </div>
                             </div>
                         </div>
@@ -338,130 +302,130 @@
 
                     <div class="tab-pane" id="tasks-tab" role="tabpanel">
                         <h6 class="font-weight-medium px-3 m-0 py-2 font-13 text-uppercase bg-light">
-                            <span class="d-block py-1">Orther Settings</span>
+                            <span class="d-block py-1">{{ __('Orther Settings') }} </span>
                         </h6>
                         <div class="px-3">
-                            <a href="{{route("upload_language")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Language Upload</h6></a>
+                            <a href="{{route("upload_language")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Language Upload') }} </h6></a>
                         </div>
                     </div>
                     <div class="tab-pane active" id="settings-tab" role="tabpanel">
                         <h6 class="font-weight-medium px-3 m-0 py-2 font-13 text-uppercase bg-light">
-                            <span class="d-block py-1">Theme Settings</span>
+                            <span class="d-block py-1">{{ __('Theme Settings') }}</span>
                         </h6>
 
                         <div class="p-3">
                             <div class="alert alert-warning" role="alert">
-                                <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
+                                <strong>{{ __('Customize') }} </strong> {{ __('the overall color scheme, sidebar menu, etc.') }}
                             </div>
 
-                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Color Scheme</h6>
+                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Color Scheme') }}</h6>
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light"
                                     id="light-mode-check" checked />
-                                <label class="custom-control-label" for="light-mode-check">Light Mode</label>
+                                <label class="custom-control-label" for="light-mode-check">{{ __('Light Mode') }}</label>
                             </div>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark"
                                     id="dark-mode-check" />
-                                <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                                <label class="custom-control-label" for="dark-mode-check">{{ __('Dark Mode') }}</label>
                             </div>
 
                             <!-- Width -->
-                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Width</h6>
+                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Width') }}</h6>
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="width" value="fluid" id="fluid-check" checked />
-                                <label class="custom-control-label" for="fluid-check">Fluid</label>
+                                <label class="custom-control-label" for="fluid-check">{{ __('Fluid') }}</label>
                             </div>
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="width" value="boxed" id="boxed-check" />
-                                <label class="custom-control-label" for="boxed-check">Boxed</label>
+                                <label class="custom-control-label" for="boxed-check">{{ __('Boxed') }}</label>
                             </div>
 
                             <!-- Menu positions -->
-                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Menus (Leftsidebar and Topbar) Positon</h6>
+                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Menus (Leftsidebar and Topbar) Positon') }}</h6>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="menus-position" value="fixed" id="fixed-check"
                                     checked />
-                                <label class="custom-control-label" for="fixed-check">Fixed</label>
+                                <label class="custom-control-label" for="fixed-check">{{ __('Fixed') }}</label>
                             </div>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="menus-position" value="scrollable"
                                     id="scrollable-check" />
-                                <label class="custom-control-label" for="scrollable-check">Scrollable</label>
+                                <label class="custom-control-label" for="scrollable-check">{{ __('Scrollable') }}</label>
                             </div>
 
                             <!-- Left Sidebar-->
-                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Left Sidebar Color</h6>
+                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Left Sidebar Color') }}</h6>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="leftsidebar-color" value="light" id="light-check" checked />
-                                <label class="custom-control-label" for="light-check">Light</label>
+                                <label class="custom-control-label" for="light-check">{{ __('Light') }}</label>
                             </div>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="leftsidebar-color" value="dark" id="dark-check" />
-                                <label class="custom-control-label" for="dark-check">Dark</label>
+                                <label class="custom-control-label" for="dark-check">{{ __('Dark') }}</label>
                             </div>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="leftsidebar-color" value="brand" id="brand-check" />
-                                <label class="custom-control-label" for="brand-check">Brand</label>
+                                <label class="custom-control-label" for="brand-check">{{ __('Brand') }}</label>
                             </div>
 
                             <div class="custom-control custom-switch mb-3">
                                 <input type="radio" class="custom-control-input" name="leftsidebar-color" value="gradient" id="gradient-check" />
-                                <label class="custom-control-label" for="gradient-check">Gradient</label>
+                                <label class="custom-control-label" for="gradient-check">{{ __('Radient') }}</label>
                             </div>
 
                             <!-- size -->
-                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Left Sidebar Size</h6>
+                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Left Sidebar Size') }}</h6>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="leftsidebar-size" value="default"
                                     id="default-size-check" checked />
-                                <label class="custom-control-label" for="default-size-check">Default</label>
+                                <label class="custom-control-label" for="default-size-check">{{ __('Default') }}</label>
                             </div>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="leftsidebar-size" value="condensed"
                                     id="condensed-check" />
-                                <label class="custom-control-label" for="condensed-check">Condensed <small>(Extra Small size)</small></label>
+                                <label class="custom-control-label" for="condensed-check">{{ __('Condensed') }} <small>({{ __('Extra Small size') }})</small></label>
                             </div>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="leftsidebar-size" value="compact"
                                     id="compact-check" />
-                                <label class="custom-control-label" for="compact-check">Compact <small>(Small size)</small></label>
+                                <label class="custom-control-label" for="compact-check">{{ __('Compact') }}  <small>({{ __('Small size') }} )</small></label>
                             </div>
 
                             <!-- User info -->
-                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Sidebar User Info</h6>
+                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Sidebar User Info') }} </h6>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="checkbox" class="custom-control-input" name="leftsidebar-user" value="fixed" id="sidebaruser-check" />
-                                <label class="custom-control-label" for="sidebaruser-check">Enable</label>
+                                <label class="custom-control-label" for="sidebaruser-check">{{ __('Enable') }}</label>
                             </div>
 
 
                             <!-- Topbar -->
-                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Topbar</h6>
+                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Topbar') }}</h6>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="topbar-color" value="dark" id="darktopbar-check"
                                     checked />
-                                <label class="custom-control-label" for="darktopbar-check">Dark</label>
+                                <label class="custom-control-label" for="darktopbar-check">{{ __('Dark') }}</label>
                             </div>
 
                             <div class="custom-control custom-switch mb-1">
                                 <input type="radio" class="custom-control-input" name="topbar-color" value="light" id="lighttopbar-check" />
-                                <label class="custom-control-label" for="lighttopbar-check">Light</label>
+                                <label class="custom-control-label" for="lighttopbar-check">{{ __('Light') }}</label>
                             </div>
 
 
-                            <button class="btn btn-primary btn-block mt-4" id="resetBtn">Reset to Default</button>
+                            <button class="btn btn-primary btn-block mt-4" id="resetBtn">{{ __('Reset to Default') }}</button>
                         </div>
 
                     </div>

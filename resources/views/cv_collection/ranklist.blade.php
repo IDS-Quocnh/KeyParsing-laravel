@@ -8,10 +8,10 @@
 					<table class="display nowrap table datatable-button-html5-basic" style="width:100%" id="rankDataTable" data-page-length='50'>
 						<thead>
 							<tr>
-				                <th class="text-center">Rank</th>
-				                <th>File Name</th>
-				                <th >File Type</th>
-				                <th class="text-center">File Point</th>
+				                <th class="text-center">{{ __("Rank") }}</th>
+				                <th>{{ __("File Name") }}</th>
+				                <th >{{ __("File Type") }}</th>
+				                <th class="text-center">{{ __("File Point") }}</th>
 				            </tr>
 						</thead>
 						<tbody>

@@ -2,7 +2,7 @@
 namespace App\Http\Middleware;
 use Closure;
 use Session;
-use Illuminate\Support\Facades\App;
+use App;
 
 class Localization
 {
@@ -16,13 +16,18 @@ class Localization
     public function handle($request, Closure $next)
     {
         $language = Session::get('language', config('app.locale'));
+        if (auth()->user()) {
+            $language = auth()->user()->default_language;
+        }
         switch ($language) {
-            case 'en':
-                $language = 'en';
+            case 'Italian':
+                $language = 'it';
                 break;
-
             case 'it':
                 $language = 'it';
+                break;
+            default:
+                $language = 'en';
                 break;
         }
         App::setLocale($language);

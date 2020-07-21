@@ -10,10 +10,10 @@
 					<table class="table datatable-button-html5-basic" data-page-length='50'>
 						<thead>
 							<tr>
-				                <th class="text-center">Rank</th>
-				                <th>File Name</th>
-				                <th class="text-center">File Point</th>
-				                <th class="text-center">Action</th>
+				                <th class="text-center">{{ __("Rank") }}</th>
+				                <th>{{ __("File Name") }}</th>
+				                <th class="text-center">{{ __("File Point") }}</th>
+				                <th class="text-center">{{ __("Action") }}</th>
 				            </tr>
 						</thead>
 						<tbody>
@@ -29,7 +29,7 @@
 								<td class="text-center">
 								<a target="_blank"
 								 href="{{url('ranking-detail')}}?fid={{$cv->id}}&operationId={{$operationId}}" >
-								  <i class="icon-list "></i> Point Details</a>
+								  <i class="icon-list "></i> {{ __("Point Details") }}</a>
 								  </td>
 				            </tr>
 
@@ -63,9 +63,9 @@ var _componentDatatableButtonsHtml5 = function() {
 		autoWidth: false,
 		dom: '<"datatable-header"fBl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
 		language: {
-			search: '<span>Filter:</span> _INPUT_',
-			searchPlaceholder: 'Type to filter...',
-			lengthMenu: '<span>Show:</span> _MENU_',
+			search: '<span>{{ __("Filter") }}:</span> _INPUT_',
+			searchPlaceholder: '{{ __("Type to filter...") }}',
+			lengthMenu: '<span>{{ __("Show") }}:</span> _MENU_',
 			paginate: { 'first': 'First', 'last': 'Last', 'next': $('html').attr('dir') == 'rtl' ? '&larr;' : '&rarr;', 'previous': $('html').attr('dir') == 'rtl' ? '&rarr;' : '&larr;' }
 		}
 	});

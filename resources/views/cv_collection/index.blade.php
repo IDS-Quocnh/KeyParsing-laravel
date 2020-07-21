@@ -12,9 +12,9 @@
 					
 						<thead>
 							<tr>
-				                <th>File Name</th>
-				                <th>Upload Date</th>
-				                <th>Actions</th>
+				                <th>{{ __('File Name') }}</th>
+				                <th>{{ __('Upload Date') }}</th>
+				                <th>{{ __('Actions') }}</th>
 				            </tr>
 						</thead>
 						<tbody>
@@ -36,7 +36,7 @@
                                                 onclick="event.preventDefault();DeleteSingleCV({{$cv->id}},'{{$cv->file_name}}');"
                                                 
                                                 
-                                                ><i class="icon-bin color-red"></i> Delete</a>
+                                                ><i class="icon-bin color-red"></i> {{ __('Delete') }}</a>
 											
 										
 									
@@ -74,15 +74,15 @@ var DeleteSingleCV = function(fid, fname)
 {
 
     bootbox.confirm({
-                title: 'Confirm Delete',
-                message: 'Are you sure to delete the file (' + fname + ')?',
+                title: '{{ __("Confirm Delete") }}',
+                message: '{{ __("Are you sure to delete the file") }} (' + fname + ')?',
                 buttons: {
                     confirm: {
-                        label: 'Yes',
+                        label: '{{ __("Yes") }}',
                         className: 'btn-primary'
                     },
                     cancel: {
-                        label: 'Cancel',
+                        label: '{{ __("Cancel") }}',
                         className: 'btn-link'
                     }
                 },
@@ -116,9 +116,9 @@ var DatatableButtonsHtml5 = function() {
             autoWidth: false,
             dom: '<"datatable-header"fBl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
             language: {
-                search: '<span>Filter:</span> _INPUT_',
-                searchPlaceholder: 'Type to filter...',
-                lengthMenu: '<span>Show:</span> _MENU_',
+                search: '<span>{{ __("Filter") }}:</span> _INPUT_',
+                searchPlaceholder: '{{ __("Type to filter...") }}',
+                lengthMenu: '<span>{{ __("Show") }}:</span> _MENU_',
                 paginate: { 'first': 'First', 'last': 'Last', 'next': $('html').attr('dir') == 'rtl' ? '&larr;' : '&rarr;', 'previous': $('html').attr('dir') == 'rtl' ? '&rarr;' : '&larr;' }
             }
         });
@@ -131,14 +131,14 @@ var DatatableButtonsHtml5 = function() {
         $('.datatable-button-init-custom').DataTable({
             buttons: [
                 {
-                    text: '<i class="icon-file-plus"></i> Add Files',
+                    text: '<i class="icon-file-plus"></i> {{ __("Add Files") }}',
                     className: 'btn btn-primary mr-1',
                     action: function(e, dt, node, config) {
                         document.getElementById('add-file-form').click();
                     }
                 },
 		{
-                    text: '<i class="icon-file-plus"></i> Download All',
+                    text: '<i class="icon-file-plus"></i> {{ __("Download All") }}',
                     className: 'btn btn-success mr-1',
                     action: function(e, dt, node, config) {
                         document.getElementById('download-form').submit();
@@ -149,15 +149,15 @@ var DatatableButtonsHtml5 = function() {
                     className: 'btn btn-danger',
                     action: function(e, dt, node, config) {
                         bootbox.confirm({
-                            title: 'Confirm Delete',
-                            message: 'Are you sure to delete all the files?',
+                            title: '{{ __("Confirm Delete") }}',
+                            message: '{{ __("Are you sure to delete all the files?") }}',
                             buttons: {
                                 confirm: {
-                                    label: 'Yes',
+                                    label: '{{ __("Yes") }}',
                                     className: 'btn-primary'
                                 },
                                 cancel: {
-                                    label: 'Cancel',
+                                    label: '{{ __("Cancel") }}',
                                     className: 'btn-link'
                                 }
                             },

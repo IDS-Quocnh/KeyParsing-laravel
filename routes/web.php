@@ -56,6 +56,8 @@ Route::group(['middleware' => 'localization'], function () {
 //Route::post('/cv-upload-zip', 'CVCollectionController@rankCV');
 
     Route::post('/download-zip', 'CVCollectionController@downloadZip')->name('download-zip');
+    Route::post('/download-language', 'SettingController@downloadLanguage')->name('download-language');
+    
 });
 
 

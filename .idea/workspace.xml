@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Localization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="workspace and unisharp api">
+      <change afterPath="$PROJECT_DIR$/resources/lang/it.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CVCollectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CVCollectionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Localization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Localization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/cv_raw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cv_collection/cv_raw.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cv_collection/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/ranklist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cv_collection/ranklist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/point_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/point_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/quick_ranking/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quick_ranking/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/quick_ranking/ranklist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quick_ranking/ranklist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ranking/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ranking/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ranking/ranklist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ranking/ranklist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/setting/uploadLanguages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/setting/uploadLanguages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -163,6 +171,18 @@
       <recent name="C:\xampp\htdocs\deeplaude\resources\views\setting" />
       <recent name="C:\xampp\htdocs\deeplaude\app\Http\Controllers" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">

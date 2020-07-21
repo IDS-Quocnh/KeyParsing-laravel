@@ -14,10 +14,8 @@
 
 								<div class="form-group row">
                 <div class="col-lg-12">
-                 You can upload CVs in Word (<code>.doc</code>/ <code>.docx</code>)
-                  or PDF (<code>.pdf</code>) format. Uploaded CVs will be stored in a directory 
-                  and will be used during ranking. You can review the stored CV list and 
-                  can delete any CV from the list. 
+                 {{ __("You can upload CVs in Word") }} (<code>.doc</code>/ <code>.docx</code>)
+                  {{ __("or") }} PDF (<code>.pdf</code>) {{ __("format") }}. {{ __("Uploaded CVs will be stored in a directory and will be used during ranking. You can review the stored CV list and can delete any CV from the list.") }} 
               </div>
               	</div>
 
@@ -30,10 +28,7 @@
 
 								<div class="form-group row">
                 <div class="col-lg-12">
-                 You need to upload list of keywords with their weight in Excel 
-                 (<code>.xls</code>/ <code>.xlsx</code>)  format. System will 
-                 calcute points of each stored CVs and will prepare the ranking. 
-                 Only CVs with positive points will be displayed in Rank List.
+                 {{ __("You need to upload list of keywords with their weight in Excel") }}  (<code>.xls</code>/ <code>.xlsx</code>) {{ __("format") }}. {{ __("System will calcute points of each stored CVs and will prepare the ranking.") }} {{ __("Only CVs with positive points will be displayed in Rank List.") }}
                 
               </div>
               	</div>
@@ -47,12 +42,7 @@
 
 								<div class="form-group row">
                 <div class="col-lg-12">
-				You can upload multiple CVs in Word (<code>.doc</code>/ <code>.docx</code>)
-                  or PDF (<code>.pdf</code>) format and file containing  keywords with 
-				  their weight in Excel (<code>.xls</code>/ <code>.xlsx</code>)  format. 
-				  System will calcute points of each uploaded CVs and will prepare the ranking. 
-                 Only CVs with positive points will be displayed in Rank List and you will abe to 
-				 export the rank list.
+				{{ __("You can upload multiple CVs in Word") }} (<code>.doc</code>/ <code>.docx</code>) {{ __("or") }} PDF (<code>.pdf</code>) {{ __("format and file containing  keywords with their weight in Excel (<code>.xls</code>/ <code>.xlsx</code>)  format. System will calcute points of each uploaded CVs and will prepare the ranking. Only CVs with positive points will be displayed in Rank List and you will abe to export the rank list.") }} 
                 
               </div>
               	</div>
