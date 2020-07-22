@@ -35,6 +35,11 @@
 
                 <div class="row mt-3">
                     <div class="col-12 text-center">
+                    	<div class="pb-1" style="color: white">
+                    	<a href="{!! route('user.change-language', ['en']) !!}" style="color: white"><span>English</span></a>
+                    	| 
+                     	<a href="{!! route('user.change-language', ['it']) !!}" style="color: white"><span>Italian</span></a>
+                     	</div>
                         <p> <a href="auth-recoverpw.html" class="text-white-50 ml-1">{{ __("Forgot your password?") }}</a></p>
                         <p class="text-white-50">{{ __("Dont have an account?") }} <a href="{{route('register')}}" class="text-white ml-1"><b>{{ __("Sign Up") }}</b></a></p>
                     </div> <!-- end col -->

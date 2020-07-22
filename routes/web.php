@@ -24,7 +24,7 @@
 // Route::get('/extract-pdf', 'FileextractorController@extractPdf');
 // Route::get('/extract-word', 'FileextractorController@extractWord');
 
-Auth::routes();
+
 Route::group(['middleware' => 'localization'], function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/home', 'HomeController@index')->name('home');
@@ -49,17 +49,11 @@ Route::group(['middleware' => 'localization'], function () {
     Route::post('/keyword-parsing', 'KeywordParsingController@keyParsing');
     Route::get('/upload_language', 'SettingController@uploadLanguagesIndex')->name('upload_language');
     Route::post('/upload_language', 'SettingController@uploadLanguages')->name('upload_language');
-    Route::get('change-language/{language}', 'SettingController@changeLanguage')->name('user.change-language');
-
-
-//Route::get('/cv-upload-zip', 'CVCollectionController@index')->name('cv-upload-zip');
-//Route::post('/cv-upload-zip', 'CVCollectionController@rankCV');
-
     Route::post('/download-zip', 'CVCollectionController@downloadZip')->name('download-zip');
     Route::post('/download-language', 'SettingController@downloadLanguage')->name('download-language');
-    
+    Auth::routes();
 });
-
+    Route::get('change-language/{language}', 'SettingController@changeLanguage')->name('user.change-language');
 
 
 

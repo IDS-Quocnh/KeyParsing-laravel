@@ -15,7 +15,7 @@ class Localization
      */
     public function handle($request, Closure $next)
     {
-        $language = Session::get('language', config('app.locale'));
+        $language = Session::get('language');
         if (auth()->user()) {
             $language = auth()->user()->default_language;
         }

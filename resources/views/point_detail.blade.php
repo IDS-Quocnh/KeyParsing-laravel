@@ -53,7 +53,7 @@
 							<tr>
 				                <th>{{ __("Keyword") }}</th>
 				                <th class="text-center">{{ __("Weight") }}</th>
-				                <th >{{ __("Mathc Type") }}</th>
+				                <th >{{ __("Match Type") }}</th>
 				                <th class="text-center">{{ __("Number of Match") }}</th>
 				                <th class="text-center">{{ __("Point") }}</th>
 				            </tr>

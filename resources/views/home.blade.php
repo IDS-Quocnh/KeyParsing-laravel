@@ -10,7 +10,7 @@
             <form method="POST" action="#" class="form-horizontal" >
           
 							<fieldset class="mb-3">
-								<legend class="text-uppercase font-size-sm font-weight-bold">Upload CV</legend> 
+								<legend class="text-uppercase font-size-sm font-weight-bold">{{ __("Upload CV") }}</legend> 
 
 								<div class="form-group row">
                 <div class="col-lg-12">
@@ -24,7 +24,7 @@
 							</fieldset>
               
             	<fieldset class="mb-3">
-								<legend class="text-uppercase font-size-sm font-weight-bold">CV Ranking</legend> 
+								<legend class="text-uppercase font-size-sm font-weight-bold">{{ __("CV Ranking") }}</legend> 
 
 								<div class="form-group row">
                 <div class="col-lg-12">
@@ -38,11 +38,11 @@
 							</fieldset>
               
 							<fieldset class="mb-3">
-								<legend class="text-uppercase font-size-sm font-weight-bold">Quick Ranking</legend> 
+								<legend class="text-uppercase font-size-sm font-weight-bold">{{ __("Quick Ranking") }}</legend> 
 
 								<div class="form-group row">
                 <div class="col-lg-12">
-				{{ __("You can upload multiple CVs in Word") }} (<code>.doc</code>/ <code>.docx</code>) {{ __("or") }} PDF (<code>.pdf</code>) {{ __("format and file containing  keywords with their weight in Excel (<code>.xls</code>/ <code>.xlsx</code>)  format. System will calcute points of each uploaded CVs and will prepare the ranking. Only CVs with positive points will be displayed in Rank List and you will abe to export the rank list.") }} 
+				{{ __("You can upload multiple CVs in Word") }} (<code>.doc</code>/ <code>.docx</code>) {{ __("or") }} PDF (<code>.pdf</code>) {{ __("format and file containing  keywords with their weight in Excel") }} (<code>.xls</code>/ <code>.xlsx</code>)  {{ __("format") }}. {{ __("System will calcute points of each uploaded CVs and will prepare the ranking. Only CVs with positive points will be displayed in Rank List and you will abe to export the rank list.") }} 
                 
               </div>
               	</div>

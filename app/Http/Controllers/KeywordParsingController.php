@@ -29,7 +29,7 @@ class KeywordParsingController extends Controller
      */
     public function index(Request $request)
     {
-        return view('keyword_parsing.index')->with('title','Keyword Parsing');
+        return view('keyword_parsing.index')->with('title','Key Parsing');
     }
 
 
@@ -57,7 +57,7 @@ class KeywordParsingController extends Controller
                 $dataArray=$data->toArray();
                 foreach($dataArray as $row){
                     if(!array_key_exists('keyword', $row) || !array_key_exists('exact_match', $row)) {
-                        return view('keyword_parsing.index')->with(['title' => 'Keyword Parsing', 'errorMessage' => "please check file excel again, the header collumn accept are 'keyword' and 'exact_match' "]);
+                        return view('keyword_parsing.index')->with(['title' => 'Key Parsing', 'errorMessage' => "please check file excel again, the header collumn accept are 'keyword' and 'exact_match' "]);
                     }
                     $keywordList[] = array(
                         'keyword'   => $row['keyword'],
@@ -125,7 +125,7 @@ class KeywordParsingController extends Controller
                 }
             }
         }
-        return view('keyword_parsing.index')->with(['title' => 'Keyword Parsing', 'keywordList' => $keywordList]);
+        return view('keyword_parsing.index')->with(['title' => 'Key Parsing', 'keywordList' => $keywordList]);
     }
     public function readWordFile($wordFile){
         $fileName = $wordFile->getClientOriginalName();

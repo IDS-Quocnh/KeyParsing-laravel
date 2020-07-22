@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="workspace and unisharp api">
-      <change afterPath="$PROJECT_DIR$/resources/lang/it.json" afterDir="false" />
+    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CVCollectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CVCollectionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SettingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KeywordParsingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KeywordParsingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Localization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Localization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/it.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/it.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/cv_raw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cv_collection/cv_raw.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cv_collection/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/ranklist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cv_collection/ranklist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/keyword_parsing/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/keyword_parsing/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/point_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/point_detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/quick_ranking/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quick_ranking/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/quick_ranking/ranklist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/quick_ranking/ranklist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/ranking/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ranking/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ranking/ranklist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ranking/ranklist.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/setting/uploadLanguages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/setting/uploadLanguages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,6 +201,14 @@
       <workItem from="1594498826002" duration="5852000" />
       <workItem from="1595153090537" duration="7478000" />
     </task>
+    <task id="LOCAL-00001" summary="udpate">
+      <created>1595326419617</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595326419617</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +226,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="udpate" />
+    <option name="LAST_COMMIT_MESSAGE" value="udpate" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Deployment" timestamp="1594499132326">

@@ -36,7 +36,7 @@ class HomeController extends Controller
         // }
 
         // exit ;
-          return view('home')->with('title','Dashboard');
+          return view('home')->with('title','Dashboards');
     }
    
 }

@@ -26,7 +26,6 @@ class SettingController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -58,16 +57,24 @@ class SettingController extends Controller
     public function changeLanguage(Request $request){
         $lang = $request->language;
         $language = config('app.locale');
-        $user = User::find(auth()->user()->id);
+        
         if ($lang == 'en') {
             $language = 'en';
-            $user->default_language = "English";
+            if (auth()->user()) {
+                $user = User::find(auth()->user()->id);
+                $user->default_language = "English";
+                $user->save();
+            }
         }
         if ($lang == 'it') {
             $language = 'it';
-            $user->default_language = "Italian";
+            if (auth()->user()) {
+                $user = User::find(auth()->user()->id);
+                $user->default_language = "Italian";
+                $user->save();
+            }
         }
-        $user->save();
+        
         Session::put('language', $language);
         return redirect()->back();
     }

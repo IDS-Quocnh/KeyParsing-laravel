@@ -9,7 +9,7 @@
     <div class="card-body">
         @if (isset($errorMessage))
         <div class="alert alert-danger alert-block">
-            <button type="button" class="close" data-dismiss="alert">×</button>
+            <button type="button" class="close" data-dismiss="alert">ﾃ�</button>
             <strong>{{ $errorMessage }}</strong>
         </div>
         @endif
@@ -19,8 +19,8 @@
             <fieldset class="mb-3">
 
                 <div class="form-group row">
-                    <label class="col-form-label col-lg-12">Please select word file (<code>.doc</code>/ <code>.docx</code>)
-                        format </label>
+                    <label class="col-form-label col-lg-12">{{ __("Please select word file") }} (<code>.doc</code>/ <code>.docx</code>)
+                        {{ __("format") }}</label>
                     <div class="col-lg-12">
                         <input id="file" type="file" name="wordFile" value=""
                                class="form-control h-auto" accept=".doc,.docx" required/>
@@ -29,8 +29,8 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-form-label col-lg-12">Please select file containing Keywords in Excel
-                        (<code>.xls</code>/ <code>.xlsx</code>) format </label>
+                    <label class="col-form-label col-lg-12">{{ __("Please select file containing Keywords in Excel") }}
+                        (<code>.xls</code>/ <code>.xlsx</code>) {{ __("format") }} </label>
                     <div class="col-lg-12">
                         <input id="file" type="file" name="excelFile" value="" accept=".xls,.xlsx"
                                class="form-control h-auto" required>
@@ -42,7 +42,7 @@
 
 
             <div class="text-right">
-                <button type="submit" class="btn btn-primary">Submit <i class="icon-paperplane ml-2"></i></button>
+                <button type="submit" class="btn btn-primary">{{ __("Submit") }} <i class="icon-paperplane ml-2"></i></button>
             </div>
         </form>
 
@@ -55,7 +55,7 @@
         <table class="table datatable-button-html5-basic" data-page-length='50'>
             <thead>
                 <tr>
-                    <th class="text-center bold">Keyword</th>
+                    <th class="text-center bold">{{ __("Keyword") }}</th>
                 </tr>
             </thead>
             <tbody>

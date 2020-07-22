@@ -229,10 +229,10 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">{{ __('Apps') }}</a></li>
-                                            <li class="breadcrumb-item active">{{$title}}</li>
+                                            <li class="breadcrumb-item active">{{__($title)}}</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">{{$title}}</h4>
+                                    <h4 class="page-title">{{__($title)}}</h4>
                                 </div>
                             </div>
                         </div>

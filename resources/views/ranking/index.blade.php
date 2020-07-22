@@ -27,7 +27,7 @@
 							<fieldset class="mb-3">
 
 								<div class="form-group row">
-									<label class="col-form-label col-lg-12">{{ __("Please select file containing Keywords with Weight in Excel ") }}(<code>.xls</code>/ <code>.xlsx</code>)  {{ __("format") }}   </label>
+									<label class="col-form-label col-lg-12">{{ __("Please select file containing Keywords with Weight in Excel") }}(<code>.xls</code>/ <code>.xlsx</code>)  {{ __("format") }}   </label>
 									<div class="col-lg-12">
 									<input id="file" type="file" name="weight_file" value=""  accept=".xls,.xlsx" 
                      class="form-control h-auto" required>	
