@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Middleware;
+use App\User;
 use Closure;
 use Session;
 use App;
@@ -17,13 +18,27 @@ class Localization
     {
         $language = Session::get('language');
         if (auth()->user()) {
-            $language = auth()->user()->default_language;
+            if($language == null){
+                $language = auth()->user()->default_language;
+            }else{
+
+                $user = User::find(auth()->user()->id);
+                switch ($language) {
+                    case 'it':
+                    case 'Italian':
+                        $user->default_language = "Italian";
+                        break;
+                    default:
+                        $user->default_language = "English";
+                        break;
+                }
+                $user->save();
+            }
         }
+
         switch ($language) {
-            case 'Italian':
-                $language = 'it';
-                break;
             case 'it':
+            case 'Italian':
                 $language = 'it';
                 break;
             default:

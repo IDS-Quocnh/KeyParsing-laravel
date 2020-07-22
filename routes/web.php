@@ -47,12 +47,15 @@ Route::group(['middleware' => 'localization'], function () {
 
     Route::get('/keyword-parsing', 'KeywordParsingController@index')->name('keyword-parsing');
     Route::post('/keyword-parsing', 'KeywordParsingController@keyParsing');
-    Route::get('/upload_language', 'SettingController@uploadLanguagesIndex')->name('upload_language');
-    Route::post('/upload_language', 'SettingController@uploadLanguages')->name('upload_language');
-    Route::post('/download-zip', 'CVCollectionController@downloadZip')->name('download-zip');
-    Route::post('/download-language', 'SettingController@downloadLanguage')->name('download-language');
     Auth::routes();
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/upload_language', 'SettingController@uploadLanguagesIndex')->name('upload_language');
+        Route::post('/upload_language', 'SettingController@uploadLanguages')->name('upload_language');
+        Route::post('/download-zip', 'CVCollectionController@downloadZip')->name('download-zip');
+        Route::post('/download-language', 'SettingController@downloadLanguage')->name('download-language');
+    });
 });
+
     Route::get('change-language/{language}', 'SettingController@changeLanguage')->name('user.change-language');
 
 
