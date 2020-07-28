@@ -8,17 +8,17 @@
     <meta content="Coderthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/UBold/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('public/assets/UBold/images/favicon.ico') }}">
 
     <!-- App css -->
-    <link href="{{ asset('assets/UBold/css/bootstrap-saas.min.css') }}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-    <link href="{{ asset('assets/UBold/css/app-saas.min.css') }}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+    <link href="{{ asset('public/assets/UBold/css/bootstrap-saas.min.css') }}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="{{ asset('public/assets/UBold/css/app-saas.min.css') }}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
 
-    <link href="{{ asset('assets/UBold/css/bootstrap-saas-dark.min.css') }}" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" disabled />
-    <link href="{{ asset('assets/UBold/css/app-saas-dark.min.css') }}" rel="stylesheet" type="text/css" id="app-dark-stylesheet"  disabled />
+    <link href="{{ asset('public/assets/UBold/css/bootstrap-saas-dark.min.css') }}" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" disabled />
+    <link href="{{ asset('public/assets/UBold/css/app-saas-dark.min.css') }}" rel="stylesheet" type="text/css" id="app-dark-stylesheet"  disabled />
 
     <!-- icons -->
-    <link href="{{ asset('assets/UBold/css/icons.min.css') }}"  rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/UBold/css/icons.min.css') }}"  rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -60,10 +60,10 @@
 </footer>
 
 <!-- Vendor js -->
-<script src="{{ asset('assets/UBold/js/vendor.min.js') }}"></script>
+<script src="{{ asset('public/assets/UBold/js/vendor.min.js') }}"></script>
 
 <!-- App js -->
-<script src="{{ asset('assets/UBold/js/app.min.js') }}"></script>
+<script src="{{ asset('public/assets/UBold/js/app.min.js') }}"></script>
 
 </body>
 </html>

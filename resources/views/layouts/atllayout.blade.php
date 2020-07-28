@@ -8,39 +8,39 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('assets/UBold/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('public/assets/UBold/images/favicon.ico') }}">
 
 	    <!-- App css -->
-	    <link href="{{ asset('assets/UBold/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-	    <link href="{{ asset('assets/UBold/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+	    <link href="{{ asset('public/assets/UBold/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+	    <link href="{{ asset('public/assets/UBold/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
 
-	    <link href="{{ asset('assets/UBold/css/bootstrap-dark.min.css') }}" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" disabled />
-	    <link href="{{ asset('assets/UBold/css/app-dark.min.css') }}" rel="stylesheet" type="text/css" id="app-dark-stylesheet"  disabled />
+	    <link href="{{ asset('public/assets/UBold/css/bootstrap-dark.min.css') }}" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" disabled />
+	    <link href="{{ asset('public/assets/UBold/css/app-dark.min.css') }}" rel="stylesheet" type="text/css" id="app-dark-stylesheet"  disabled />
 
 	    <!-- icons -->
-	    <link href="{{ asset('assets/UBold/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-	    <link href="{{ asset('assets/css/layout.min.css') }}" rel="stylesheet">
-	    <link href="{{ asset('assets/css/icons/icomoon/styles.min.css') }}" rel="stylesheet">
-	    <link href="{{ asset('assets/css/components.min.css') }}" rel="stylesheet">
+	    <link href="{{ asset('public/assets/UBold/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+	    <link href="{{ asset('public/assets/css/layout.min.css') }}" rel="stylesheet">
+	    <link href="{{ asset('public/assets/css/icons/icomoon/styles.min.css') }}" rel="stylesheet">
+	    <link href="{{ asset('public/assets/css/components.min.css') }}" rel="stylesheet">
         <!-- Vendor js -->
 
 
 
 
-        <script src="{{ asset('assets/js/main/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/loaders/blockui.min.js') }}"></script>
-        <script src="{{ asset('assets/js/demo_pages/datatables_extension_buttons_html5.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/tables/datatables/extensions/buttons.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/forms/selects/select2.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/main/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/plugins/loaders/blockui.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/demo_pages/datatables_extension_buttons_html5.js') }}"></script>
+        <script src="{{ asset('public/assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/plugins/tables/datatables/extensions/buttons.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js') }}"></script>
 
-        <script src="{{ asset('assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js') }}"></script>
 
-        <script src="assets/js/plugins/notifications/bootbox.min.js"></script>
-        <script src="{{ asset('assets/UBold/js/vendor.min.js') }}"></script>
-        <script src="{{ asset('assets/js/main/jquery.min.js') }}"></script>
+        <script src="public/assets/js/plugins/notifications/bootbox.min.js"></script>
+        <script src="{{ asset('public/assets/UBold/js/vendor.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/main/jquery.min.js') }}"></script>
 
 
     </head>
@@ -99,18 +99,18 @@
                     <div class="logo-box">
                         <a href="index.html" class="logo logo-dark text-center">
                             <span class="logo-sm">
-                                <img src="{{ asset('assets/UBold/images/logo-sm.png') }}" alt="" height="22">
+                                <img src="{{ asset('public/assets/UBold/images/logo-sm.png') }}" alt="" height="22">
                                 <!-- <span class="logo-lg-text-light">UBold</span> -->
                             </span>
                             <span class="logo-lg">
-                                <img src="{{ asset('assets/UBold/images/logo-dark.png') }}" alt="" height="20">
+                                <img src="{{ asset('public/assets/UBold/images/logo-dark.png') }}" alt="" height="20">
                                 <!-- <span class="logo-lg-text-light">U</span> -->
                             </span>
                         </a>
 
                         <a href="{{ route('home') }}" class="logo logo-light text-center">
                             <span class="logo-sm">
-                                <img src="{{ asset('assets/UBold/images/logo-sm.png') }}" alt="" height="22">
+                                <img src="{{ asset('public/assets/UBold/images/logo-sm.png') }}" alt="" height="22">
                             </span>
                             <span class="logo-lg">
                                 <h3 style="color:white; margin-top : 20px"> DEEPLAUDE</h3>
@@ -195,6 +195,30 @@
                                     <i data-feather="cpu"></i>
                                     <span class="badge badge-success badge-pill float-right"></span>
                                     <span> {{ __('Key Parsing') }}  </span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="{{ route('menu-management') }}">
+                                    <i data-feather="cpu"></i>
+                                    <span class="badge badge-success badge-pill float-right"></span>
+                                    <span> {{ __('Menu Management') }}  </span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="{{ route('catagory-management') }}">
+                                    <i data-feather="cpu"></i>
+                                    <span class="badge badge-success badge-pill float-right"></span>
+                                    <span> {{ __('Catagory Management') }}  </span>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="{{ route('post-management') }}">
+                                    <i data-feather="cpu"></i>
+                                    <span class="badge badge-success badge-pill float-right"></span>
+                                    <span> {{ __('Post Management') }}  </span>
                                 </a>
                             </li>
 
@@ -440,7 +464,7 @@
 
 
         <!-- App js -->
-        <script src="{{ asset('assets/UBold/js/app.min.js') }}"></script>
+        <script src="{{ asset('public/assets/UBold/js/app.min.js') }}"></script>
 
         <script>
             if ( window.history.replaceState ) {
