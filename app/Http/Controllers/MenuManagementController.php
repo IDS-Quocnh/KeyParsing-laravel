@@ -8,6 +8,7 @@ use Auth;
 use Session;
 use File;
 use App\Model\Menu;
+use App\Model\Catagory;
 
 class MenuManagementController extends Controller
 {
@@ -35,9 +36,9 @@ class MenuManagementController extends Controller
         if ($request->isMethod('post')) {
             $item = Menu::find($request->id);
             if ($request->name == $item->name) {
-                $keyUnikey = "required|min:3";
+                $keyUnikey = "required|min:3|max:256";
             } else {
-                $keyUnikey = "required|unique:menu|min:3|max256";
+                $keyUnikey = "required|unique:menu|min:3|max:256";
             }
             $request->validate([
                 'name' => $keyUnikey,
@@ -48,10 +49,7 @@ class MenuManagementController extends Controller
             $item->setAttributeMap($request->all());
             $item->save();
             $list = Menu::orderBy('created_at', 'desc')->get();
-            foreach ($list as $item){
-                $item->short_message = substr($item->message,0,150);
-            }
-            return view('MenuController.list')->with('susscessMessage', 'Popup Message name "' . $name . '" edit successfully')
+            return view('MenuManagement.list')->with('susscessMessage', 'Menu name "' . $name . '" edit successfully')
                 ->with('list', $list);
         } else {
             if (!isset($request->id)) {
@@ -80,11 +78,18 @@ class MenuManagementController extends Controller
 
     public function delete(Request $request)
     {
-//         $item = Menu::find($request->id);
-//         $name = $item->name;
-//         $item->delete();
-//         $list = Menu::orderBy('created_at', 'desc')->get();
-//         return view('MenuController.list')->with('susscessMessage', 'Popup Message name "' . $name . '" deleted successfully')->with('list', $list);
+        $item = Menu::find($request->id);
+        $name = $item->name;
+        $item->delete();
+        $list = Menu::orderBy('created_at', 'desc')->get();
+        return view('MenuManagement.list')->with('susscessMessage', 'Menu name "' . $name . '" deleted successfully')->with('list', $list);
+    } 
+    
+    public function show(Request $request)
+    {
+        $list = Catagory::query()->where('menu_id', '=', $request->id)->orderBy('created_at', 'desc')->get();
+        $itemMenu = Menu::find($request->id);
+        return view('MenuManagement.show')->with('list', $list)->with('itemMenu', $itemMenu);
     } 
 
 }

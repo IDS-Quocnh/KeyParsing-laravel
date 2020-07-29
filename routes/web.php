@@ -56,6 +56,7 @@ Route::group(['middleware' => 'localization'], function () {
     });
     
     Route::get('/menu-management', 'MenuManagementController@index')->name('menu-management');
+    Route::get('/menu-management/show', 'MenuManagementController@show')->name('menu-management/show');
     Route::get('/menu-management/add', 'MenuManagementController@add')->name('menu-management/add');
     Route::post('/menu-management/add', 'MenuManagementController@add')->name('menu-management/add');
     Route::get('/menu-management/edit', 'MenuManagementController@edit')->name('menu-management/edit');
@@ -63,6 +64,7 @@ Route::group(['middleware' => 'localization'], function () {
     Route::post('/menu-management/delete', 'MenuManagementController@delete')->name('menu-management/delete');
     
     Route::get('/catagory-management', 'CatagoryManagementController@index')->name('catagory-management');
+    Route::get('/catagory-management/show', 'CatagoryManagementController@show')->name('catagory-management/show');
     Route::get('/catagory-management/add', 'CatagoryManagementController@add')->name('catagory-management/add');
     Route::post('/catagory-management/add', 'CatagoryManagementController@add')->name('catagory-management/add');
     Route::get('/catagory-management/edit', 'CatagoryManagementController@edit')->name('catagory-management/edit');
@@ -70,11 +72,15 @@ Route::group(['middleware' => 'localization'], function () {
     Route::post('/catagory-management/delete', 'CatagoryManagementController@delete')->name('catagory-management/delete');
     
     Route::get('/post-management', 'postManagementController@index')->name('post-management');
+    Route::get('/post-management/show', 'postManagementController@show')->name('post-management/show');
     Route::get('/post-management/add', 'postManagementController@add')->name('post-management/add');
     Route::post('/post-management/add', 'postManagementController@add')->name('post-management/add');
     Route::get('/post-management/edit', 'postManagementController@edit')->name('post-management/edit');
     Route::post('/post-management/edit', 'postManagementController@edit')->name('post-management/edit');
     Route::post('/post-management/delete', 'postManagementController@delete')->name('post-management/delete');
+    
+    Route::get('/getCatagoryByMenuId', 'CatagoryManagementController@getCatagoryByMenuId')->name('getCatagoryByMenuId');
+    
 });
 
     Route::get('change-language/{language}', 'SettingController@changeLanguage')->name('user.change-language');

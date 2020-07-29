@@ -22,6 +22,8 @@
 	    <link href="{{ asset('public/assets/css/layout.min.css') }}" rel="stylesheet">
 	    <link href="{{ asset('public/assets/css/icons/icomoon/styles.min.css') }}" rel="stylesheet">
 	    <link href="{{ asset('public/assets/css/components.min.css') }}" rel="stylesheet">
+	    <link href="{{ asset('public/css/summernote.min.css') }}" rel="stylesheet">
+	    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
         <!-- Vendor js -->
 
 
@@ -41,6 +43,8 @@
         <script src="public/assets/js/plugins/notifications/bootbox.min.js"></script>
         <script src="{{ asset('public/assets/UBold/js/vendor.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/main/jquery.min.js') }}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       
 
 
     </head>
@@ -158,70 +162,20 @@
 
                             <li class="menu-title">{{ __('Navigation') }}</li>
 
-                            <li>
-                                <a href="{{ route('home') }}">
-                                    <i data-feather="airplay"></i>
-                                    <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('Dashboards') }} </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ route('cv-list') }}">
-                                    <i data-feather="grid"></i>
-                                    <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('CV Collection') }} </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ route('ranking') }}">
-                                    <i data-feather="cpu"></i>
-                                    <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('CV Ranking') }} </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ route('quick-ranking') }}">
-                                    <i data-feather="cpu"></i>
-                                    <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('Quick Ranking') }} </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ route('keyword-parsing') }}">
-                                    <i data-feather="cpu"></i>
-                                    <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('Key Parsing') }}  </span>
-                                </a>
-                            </li>
+                            <?php 
+                                $listMenu = App\Model\Menu::orderBy('created_at', 'desc')->get();
+                            ?>
                             
-                            <li>
-                                <a href="{{ route('menu-management') }}">
+							@foreach($listMenu as $indexKey => $itemMenu)
+							<li>
+                                <a href="{{route('menu-management/show',['id' => $itemMenu->id])}}">
                                     <i data-feather="cpu"></i>
                                     <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('Menu Management') }}  </span>
+                                    <span> {{ $itemMenu->name }}  </span>
                                 </a>
                             </li>
+                            @endforeach
                             
-                            <li>
-                                <a href="{{ route('catagory-management') }}">
-                                    <i data-feather="cpu"></i>
-                                    <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('Catagory Management') }}  </span>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="{{ route('post-management') }}">
-                                    <i data-feather="cpu"></i>
-                                    <span class="badge badge-success badge-pill float-right"></span>
-                                    <span> {{ __('Post Management') }}  </span>
-                                </a>
-                            </li>
-
 
                         </ul>
 
@@ -329,7 +283,9 @@
                             <span class="d-block py-1">{{ __('Orther Settings') }} </span>
                         </h6>
                         <div class="px-3">
-                            <a href="{{route("upload_language")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Language Upload') }} </h6></a>
+                            <a href="{{route("menu-management")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Menu Management') }} </h6></a>
+                            <a href="{{route("catagory-management")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Catagory Management') }} </h6></a>
+                            <a href="{{route("post-management")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Post Management') }} </h6></a>
                         </div>
                     </div>
                     <div class="tab-pane active" id="settings-tab" role="tabpanel">
@@ -465,6 +421,7 @@
 
         <!-- App js -->
         <script src="{{ asset('public/assets/UBold/js/app.min.js') }}"></script>
+        <script src="{{ asset('public/js/summernote.min.js') }}"></script>
 
         <script>
             if ( window.history.replaceState ) {
