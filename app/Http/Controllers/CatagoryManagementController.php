@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Model\Post;
 use Illuminate\Http\Request;
 use Redirect;
 use DB;
@@ -97,6 +98,13 @@ class CatagoryManagementController extends Controller
             $resultString = $resultString . $item->id . ";" . $item->name . "||";
         }
         return $resultString;
-    } 
-    
+    }
+
+    public function show(Request $request)
+    {
+        $list = Post::query()->where('catagory_id', '=', $request->id)->orderBy('created_at', 'desc')->get();
+        $itemCatagory = Catagory::find($request->id);
+        return view('CatagoryManagement.show')->with('list', $list)->with('itemCatagory', $itemCatagory);
+    }
+
 }

@@ -4,14 +4,17 @@
 	padding-bottom: 10px;  
 	padding-left: 10px;  
 }
-.post-block p{
+.post-block p a{
 	margin: 0;
 	font-size: 17px;
 	color: #292b2c;
 	font-weight: 600;
 }
+.post-block p{
+	margin: 0;
+}
 
-.post-block p:hover{
+.post-block p a:hover{
 	margin: 0;
 	font-size: 17px;
 	color: #5488c7;

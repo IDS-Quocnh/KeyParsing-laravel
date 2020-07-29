@@ -1,10 +1,10 @@
-@extends('layouts.atllayout', ['title' => $itemMenu->name, 'menukey' =>
+@extends('layouts.atllayout', ['title' => $itemCatagory->name, 'menukey' =>
 'dataCenter']) @section('content')
 <div class="card">
 	<div class="card-body">
 		<div class="top-card-button-wrapper">
-			<a href="{{route('catagory-management/add')}}" type="button"
-				class="btn btn-success btn-sm mb-2">Add New Catagory</a>
+			<a href="{{route('post-management/add')}}" type="button"
+				class="btn btn-success btn-sm mb-2">Add New Post</a>
 		</div>
 		@if(isset($susscessMessage))
 		<div class="alert alert-success" role="alert">{{$susscessMessage}}</div>
