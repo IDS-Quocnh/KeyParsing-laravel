@@ -50,7 +50,7 @@
                                 <label for="description" class="col-md-4 control-label">Description</label>
     
                                 <div class="col-md-12">
-                                    <textarea id="description" class="form-control" name="description" style="height: 100px" required>{{isset($item) ? $item->description :''}} </textarea>
+                                    <textarea id="description" class="form-control" name="description" style="height: 50px" required>{{isset($item) ? $item->description :''}} </textarea>
     
                                     @if ($errors->has('description'))
                                         <span class="help-block">
@@ -59,6 +59,25 @@
                                     @endif
                                 </div>
                             </div>
+                            
+                             <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+                                <label for="content" class="col-md-4 control-label">Post Content</label>
+    
+                                <div class="col-md-12">
+                                    <textarea id="content" class="form-control" name="content" style="height: 700px" required>{{isset($item) ? $item->content :''}}  </textarea>
+                                    @if ($errors->has('content'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('content') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            
+                             <script>
+        								 $(document).ready(function() {
+                                            $('#content').summernote();
+                                        });
+							 </script>
                             
                             <?php 
                                 $listMenu = App\Model\Menu::orderBy('created_at', 'desc')->get();
@@ -70,7 +89,7 @@
                                 <div class="col-md-3">
 									<select id="menu_id" class="form-control">
     									@foreach ($listMenu as $indexKey => $itemMenu)
-    										<option value="{{$itemMenu->id}}" {{isset($item) && $itemMenu->id == $item->menu_id ? 'selected' : ''}}>{{$itemMenu->name}}</option>
+    										<option value="{{$itemMenu->id}}" {{(isset($item) && $itemMenu->id == $item->menu_id) || (isset($menu_id) && $menu_id == $itemMenu->id) ? 'selected' : ''}}>{{$itemMenu->name}}</option>
                                 		@endforeach
 									</select> 
 									@if ($errors->has('menu_id'))
@@ -114,6 +133,9 @@
 												if( oldCatagoryId == partss[0]){
 													optionStr = optionStr + 'selected';
 												}
+												if('{{isset($catagory_id) ? $catagory_id : "null"}}' == partss[0]){
+													optionStr = optionStr + 'selected';
+												}
 												optionStr = optionStr + ">" + partss[1] + "</option>";
 											}
 											$("#catagory_id").html(optionStr);
@@ -149,24 +171,6 @@
                                 </div>
                             </div>
                             
-                            <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                                <label for="content" class="col-md-4 control-label">Post Content</label>
-    
-                                <div class="col-md-12">
-                                    <textarea id="content" class="form-control" name="content" style="height: 700px" required>{{isset($item) ? $item->content :''}}  </textarea>
-                                    @if ($errors->has('content'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('content') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-                            
-                             <script>
-        								 $(document).ready(function() {
-                                            $('#content').summernote();
-                                        });
-    								 </script>
                             
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
@@ -182,4 +186,28 @@
         </div>
     </div>
 </div>
+
+@if(isset($popupMode))
+<script>
+	$(".navbar-custom").hide();
+	$(".left-side-menu").hide();
+	$(".page-title-box").hide();
+	$(".top-card-button-wrapper").hide();
+	$(".content-page").css("margin-left","0px");
+	$(".content-page").css("margin-top","0px");
+	$(".content-page").css("padding-left","0px");
+	$(".content-page").css("padding-bottom","0px");
+	$(".content-page").css("padding-right","0px");
+	$(".content").css("padding-left","0px");
+	$(".content").css("padding-top","0px");
+	$(".content").css("padding-bottom","0px");
+	$(".content").css("padding-right","0px");
+	$(".container-fluid").css("padding-left","0px");
+	$(".container-fluid").css("padding-right","0px");
+	$("body").css("padding-bottom","0px");
+	setTimeout(function(){ $("#lastfooter").hide(); }, 500);
+	
+	
+</script>
+@endif
 @endsection

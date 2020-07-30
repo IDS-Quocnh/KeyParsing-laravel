@@ -87,7 +87,7 @@ class MenuManagementController extends Controller
     
     public function show(Request $request)
     {
-        $list = Catagory::query()->where('menu_id', '=', $request->id)->orderBy('created_at', 'desc')->get();
+        $list = Catagory::query()->where('menu_id', '=', $request->id)->orderBy('created_at', 'asc')->get();
         $itemMenu = Menu::find($request->id);
         return view('MenuManagement.show')->with('list', $list)->with('itemMenu', $itemMenu);
     } 

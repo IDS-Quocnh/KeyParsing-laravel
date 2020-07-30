@@ -55,13 +55,13 @@ class CatagoryManagementController extends Controller
             ->orderBy('catagory.created_at', 'desc')
             ->get(['catagory.id as id', 'catagory.name as name', 'menu.name as menu_name']);
             return view('CatagoryManagement.list')->with('susscessMessage', 'Catagory name "' . $name . '" edit successfully')
-            ->with('list', $list);
+            ->with('list', $list)->with('popupMode', $request->popupMode);
         } else {
             if (!isset($request->id)) {
                 return redirect()->route('home');
             }
             $item = Catagory::find($request->id);
-            return view('CatagoryManagement.main')->with('item', $item);
+            return view('CatagoryManagement.main')->with('item', $item)->with('popupMode', $request->popupMode);
         }
     }
     
@@ -77,7 +77,7 @@ class CatagoryManagementController extends Controller
             $item->save();
             return view('CatagoryManagement.main')->with('susscessMessage', 'Add Catagory successfully');
         } else {
-            return view('CatagoryManagement.main');
+            return view('CatagoryManagement.main')->with('menu_id', $request->menu_id)->with('popupMode', $request->popupMode);
         }
     }
     
@@ -102,9 +102,9 @@ class CatagoryManagementController extends Controller
 
     public function show(Request $request)
     {
-        $list = Post::query()->where('catagory_id', '=', $request->id)->orderBy('created_at', 'desc')->get();
+        $list = Post::query()->where('catagory_id', '=', $request->id)->orderBy('created_at', 'asc')->get();
         $itemCatagory = Catagory::find($request->id);
-        return view('CatagoryManagement.show')->with('list', $list)->with('itemCatagory', $itemCatagory);
+        return view('CatagoryManagement.show')->with('list', $list)->with('itemCatagory', $itemCatagory)->with('menu_id', $itemCatagory->menu_id);
     }
 
 }

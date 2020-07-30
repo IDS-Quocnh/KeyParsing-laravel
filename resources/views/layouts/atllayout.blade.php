@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>{{$title}} | {{ __('CV-Ranking') }}</title>
+        <title>{{$title}} | {{ __('PanNguyen') }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -43,7 +43,8 @@
         <script src="public/assets/js/plugins/notifications/bootbox.min.js"></script>
         <script src="{{ asset('public/assets/UBold/js/vendor.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/main/jquery.min.js') }}"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
        
 
 
@@ -117,7 +118,7 @@
                                 <img src="{{ asset('public/assets/UBold/images/logo-sm.png') }}" alt="" height="22">
                             </span>
                             <span class="logo-lg">
-                                <h3 style="color:white; margin-top : 20px"> DEEPLAUDE</h3>
+                                <h3 style="color:white; margin-top : 20px"> QUOC NGUYEN</h3>
                             </span>
                         </a>
                     </div>
@@ -163,7 +164,7 @@
                             <li class="menu-title">{{ __('Navigation') }}</li>
 
                             <?php 
-                                $listMenu = App\Model\Menu::orderBy('created_at', 'desc')->get();
+                                $listMenu = App\Model\Menu::orderBy('id', 'asc')->get();
                             ?>
                             
 							@foreach($listMenu as $indexKey => $itemMenu)
@@ -222,11 +223,11 @@
                 </div> <!-- content -->
 
                 <!-- Footer Start -->
-                <footer class="footer">
+                <footer class="footer" id="lastfooter">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> &copy; Deeplaude</a>
+                                <script>document.write(new Date().getFullYear())</script> &copy; Quoc Nguyen</a>
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-right footer-links d-none d-sm-block">
@@ -286,6 +287,7 @@
                             <a href="{{route("menu-management")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Menu Management') }} </h6></a>
                             <a href="{{route("catagory-management")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Catagory Management') }} </h6></a>
                             <a href="{{route("post-management")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Post Management') }} </h6></a>
+                            <a href="{{route("upload-image")}}"><h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">{{ __('Upload Image') }} </h6></a>
                         </div>
                     </div>
                     <div class="tab-pane active" id="settings-tab" role="tabpanel">
@@ -427,6 +429,9 @@
             if ( window.history.replaceState ) {
                 window.history.replaceState( null, null, window.location.href );
             }
+            $('.modal').on('hidden.bs.modal', function () {
+        		location.reload();
+        	});
         </script>
     </body>
 <style>
@@ -443,4 +448,5 @@
         line-height: 75px !important;
     }
 </style>
+
 </html>

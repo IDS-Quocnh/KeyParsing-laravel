@@ -56,7 +56,7 @@
                                 <div class="col-md-6">
 									<select name="menu_id" id="cars" class="form-control">
     									@foreach ($listMenu as $indexKey => $itemMenu)
-    										<option value="{{$itemMenu->id}}">{{$itemMenu->name}}</option>
+    										<option value="{{$itemMenu->id}}" {{(isset($item) && $itemMenu->id == $item->menu_id) || (isset($menu_id) && $itemMenu->id == $menu_id)  ? 'selected' : ''}}>{{$itemMenu->name}}</option>
                                 		@endforeach
 									</select> 
 									@if ($errors->has('name'))
@@ -83,4 +83,27 @@
         </div>
     </div>
 </div>
+
+@if(isset($popupMode))
+<script>
+	$(".navbar-custom").hide();
+	$(".left-side-menu").hide();
+	$(".page-title-box").hide();
+	$(".top-card-button-wrapper").hide();
+	$(".content-page").css("margin-left","0px");
+	$(".content-page").css("margin-top","0px");
+	$(".content-page").css("padding-left","0px");
+	$(".content-page").css("padding-bottom","0px");
+	$(".content-page").css("padding-right","0px");
+	$(".content").css("padding-left","0px");
+	$(".content").css("padding-top","0px");
+	$(".content").css("padding-bottom","0px");
+	$(".content").css("padding-right","0px");
+	$(".container-fluid").css("padding-left","0px");
+	$(".container-fluid").css("padding-right","0px");
+	$("body").css("padding-bottom","0px");
+	$("body").css("overflow","hidden");
+	setTimeout(function(){ $("#lastfooter").hide(); }, 500);
+</script>
+@endif
 @endsection

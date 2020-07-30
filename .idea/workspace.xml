@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="udpate">
-      <change afterPath="$PROJECT_DIR$/resources/views/CatagoryManagement/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CVCollectionController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CVRankingController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CatagoryManagementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CatagoryManagementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KeywordParsingController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuickRankingController copy.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/MenuManagement/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/MenuManagement/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/cv_raw.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cv_collection/ranklist.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/keyword_parsing/.index.blade.php.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/keyword_parsing/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/quick_ranking/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/quick_ranking/ranklist.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ranking/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ranking/ranklist.blade.php" beforeDir="false" />
+    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UploadImageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/bootstrap.min5c33.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/bootstrap.min5c33.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/clipboard.min5c33.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/dropzone5c33.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/dropzone5c33.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.gradientify5c33.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.growl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.growl5c33.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.min5c33.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/main.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/purple.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/tooltips.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/dropit/tooltips5c33.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/PostManagement/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/upload_image/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/upload_image/index.blade_bk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/upload_image/upload.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/5f229a4e5354f/5f229a4e53552.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/5f229aa727b05/5f229aa727b07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/5f229ac5dc46e/5f229ac5dc471.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,15 +186,27 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\deeplaude\KeyParsing-laravel\resources\lang" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\deeplaude\KeyParsing-laravel\resources\views\CatagoryManagement" />
       <recent name="D:\KeyParsing-laravel" />
       <recent name="C:\xampp\htdocs\deeplaude\resources\views\setting" />
       <recent name="C:\xampp\htdocs\deeplaude\app\Http\Controllers" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\deeplaude\KeyParsing-laravel\resources\lang" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -219,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595932913101</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finished">
+      <created>1596103422133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596103422133</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,38 +272,33 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="udpate" />
-    <option name="LAST_COMMIT_MESSAGE" value="udpate" />
+    <MESSAGE value="finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="179" key="#Deployment" timestamp="1596030584282" />
-    <state x="552" y="179" key="#Deployment/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="648" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596030584282" />
-    <state x="648" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596032166820">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596032166820" />
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1596065122134">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596065122134" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1596030584282" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="192" y="220" width="1736" height="856" key="DirDiffDialog" timestamp="1596030584282" />
-    <state x="192" y="220" width="1736" height="856" key="DirDiffDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="794" y="444" key="NewPhpFileDialog" timestamp="1596030584282" />
-    <state x="794" y="444" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="792" y="231" key="RollbackChangesDialog" timestamp="1596031804079">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="792" y="231" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596031804079" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1596030584282" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596030584282" />
-    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="845" y="251" key="ftp.server.browser" timestamp="1596030584282" />
-    <state x="845" y="251" key="ftp.server.browser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596030584282" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596030584282" />
+    <state x="552" y="179" key="#Deployment" />
+    <state x="552" y="179" key="#Deployment/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="648" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" />
+    <state x="648" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" />
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="585" y="115" key="CommitChangelistDialog2" />
+    <state x="585" y="115" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="192" y="220" width="1736" height="856" key="DirDiffDialog" />
+    <state x="192" y="220" width="1736" height="856" key="DirDiffDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="794" y="444" key="NewPhpFileDialog" />
+    <state x="794" y="444" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="792" y="231" key="RollbackChangesDialog" />
+    <state x="792" y="231" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" />
+    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="845" y="251" key="ftp.server.browser" />
+    <state x="845" y="251" key="ftp.server.browser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" />
   </component>
 </project>

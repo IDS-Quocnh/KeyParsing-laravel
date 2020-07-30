@@ -8,6 +8,7 @@ use Auth;
 use Session;
 use File;
 use App\Model\Post;
+use App\Model\Catagory;
 
 class PostManagementController extends Controller
 {
@@ -69,7 +70,7 @@ class PostManagementController extends Controller
             ->where('post.id', '=' , $request->id)
             ->get(['post.id as id', 'post.name as name' , 'post.description', 'post.content' , 'post.catagory_id as catagory_id', 'menu.id as menu_id', 'catagory.name as catagory_name', 'menu.name as menu_name'])
             ->first();
-            return view('PostManagement.main')->with('item', $item);
+            return view('PostManagement.main')->with('item', $item)->with('popupMode', $request->popupMode);
         }
     }
     
@@ -85,7 +86,9 @@ class PostManagementController extends Controller
             $item->save();
             return view('PostManagement.main')->with('susscessMessage', 'Add Post successfully');
         } else {
-            return view('PostManagement.main');
+            $catagory = Catagory::find($request->catagory_id);
+            $menu_id = $catagory->menu_id;
+            return view('PostManagement.main')->with('catagory_id', $request->catagory_id)->with('menu_id', $menu_id)->with('popupMode', $request->popupMode);
         }
     }
     
@@ -97,5 +100,12 @@ class PostManagementController extends Controller
         $list = $this->getList();
         return view('PostManagement.list')->with('susscessMessage', 'Post name "' . $name . '" deleted successfully')->with('list', $list);
     } 
+    
+    public function show(Request $request)
+    {
+        $item = Post::find($request->id);
+        $itemCatagory = Catagory::find($item->catagory_id);
+        return view('PostManagement.show')->with('item', $item)->with('itemCatagory', $itemCatagory);
+    }
 
 }

@@ -81,6 +81,11 @@ Route::group(['middleware' => 'localization'], function () {
     
     Route::get('/getCatagoryByMenuId', 'CatagoryManagementController@getCatagoryByMenuId')->name('getCatagoryByMenuId');
     
+    Route::get('/upload-image', 'UploadImageController@index')->name('upload-image');
+    Route::post('/upload-image/upload', 'UploadImageController@upload')->name('upload-image/upload');
+    Route::get('/upload-image/upload', 'UploadImageController@upload')->name('upload-image/upload');
+    Route::get('/', 'HomeController@index')->name('/');
+    
 });
 
     Route::get('change-language/{language}', 'SettingController@changeLanguage')->name('user.change-language');
