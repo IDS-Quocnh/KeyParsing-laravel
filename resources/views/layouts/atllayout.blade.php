@@ -59,7 +59,25 @@
             <div class="navbar-custom">
                 <div class="container-fluid">
                     <ul class="list-unstyled topnav-menu float-right mb-0">
-                        <li class="dropdown notification-list topbar-dropdown">
+
+    					<li class="d-none d-lg-block">
+    						<form class="app-search" action="/search">
+    							<div class="app-search-box dropdown">
+    								<div class="input-group" style="width: 300px;">
+    									<input type="search" class="form-control" name="queryString" value="{{isset($queryString) ? $queryString : ''}}"
+    										placeholder="Search..." id="top-search">
+    									<div class="input-group-append">
+    										<button class="btn" type="submit">
+    											<i class="fe-search"></i>
+    										</button>
+    									</div>
+    								</div>
+    							</div>
+    						</form>
+						</li>
+
+
+						<li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <span class="pro-user-name ml-1">
                                      {{ Auth::user()->default_language }} <i class="mdi mdi-chevron-down"></i>

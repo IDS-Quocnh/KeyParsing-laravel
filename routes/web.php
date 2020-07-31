@@ -86,6 +86,8 @@ Route::group(['middleware' => 'localization'], function () {
     Route::get('/upload-image/upload', 'UploadImageController@upload')->name('upload-image/upload');
     Route::get('/', 'HomeController@index')->name('/');
     
+    Route::get('/search', 'SearchController@index')->name('search');
+    
 });
 
     Route::get('change-language/{language}', 'SettingController@changeLanguage')->name('user.change-language');

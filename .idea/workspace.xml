@@ -1,35 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UploadImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/bootstrap.min5c33.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/bootstrap.min5c33.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/clipboard.min5c33.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/dropzone5c33.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/dropzone5c33.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.gradientify5c33.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.growl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.growl5c33.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/jquery.min5c33.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/main.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/tooltips.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/dropit/tooltips5c33.js.download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/PostManagement/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/upload_image/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/upload_image/index.blade_bk.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/upload_image/upload.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/5f229a4e5354f/5f229a4e53552.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/5f229aa727b05/5f229aa727b07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/5f229ac5dc46e/5f229ac5dc471.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+    <list default="true" id="e543f7f5-33b0-4876-87f1-81eece72525b" name="Default Changelist" comment="finished">
+      <change afterPath="$PROJECT_DIR$/KeyParsing-laravel.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Search/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/atllayout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -250,7 +226,28 @@
       <option name="project" value="LOCAL" />
       <updated>1596103422133</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finished">
+      <created>1596104394583</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596104394583</updated>
+    </task>
+    <task id="LOCAL-00005" summary="finished">
+      <created>1596104590540</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596104590540</updated>
+    </task>
+    <task id="LOCAL-00006" summary="finished">
+      <created>1596104976921</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596104976921</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
